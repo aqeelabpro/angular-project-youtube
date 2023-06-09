@@ -1,0 +1,17 @@
+p {
+  font-family: Lato;
+}
+
+input {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: blue;
+  background-color: skyblue;
+}

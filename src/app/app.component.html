@@ -1,0 +1,99 @@
+<!-- <h1>Pipes in Angular</h1>
+<h1>{{ today | date: 'fullDate' }}</h1>
+<h1>{{ text | uppercase }}</h1>
+<p>{{ lowerCaseText | lowercase }}</p>
+<p>{{ person | json }}</p> -->
+
+<!-- <p>Forms in Angular</p>
+<input type="text" />
+1- Template Driven Forms 2- Reactive Forms
+
+<form #form="ngForm" (ngSubmit)="saveData(name.value)">
+  <input type="text" #name ngModel value="Name" />
+  <button type="submit">Submit</button>
+</form>
+
+{{ name.value }} -->
+
+<!-- <form #form="ngForm" (ngSubmit)="saveUserData(form.value)">
+  <input
+    type="text"
+    name="name"
+    ngModel
+    placeholder="Name"
+    required="true"
+    minlength="3"
+  />
+  <br />
+
+  <input
+    type="email"
+    name="email"
+    ngModel
+    placeholder="Email"
+    required="true"
+    minlength="3"
+  />
+  <br />
+
+  <input
+    required="true"
+    type="password"
+    name="password"
+    placeholder="Password"
+    minlength="3"
+    ngModel
+  />
+  <br />
+  <button [disabled]="!form.valid" type="submit">Submit</button>
+</form> -->
+
+<!-- <form #form="ngForm" (ngSubmit)="saveUserData(form.value)">
+  <input
+    type="text"
+    ngModel
+    #name="ngModel"
+    placeholder="Name"
+    required="true"
+    minlength="3"
+    name="name"
+  />
+  <br />
+
+  <input
+    type="email"
+    #email="ngModel"
+    ngModel
+    placeholder="Email"
+    required="true"
+    name="email"
+    minlength="3"
+  />
+  <br />
+
+  <input
+    #password="ngModel"
+    required="true"
+    name="password"
+    type="password"
+    placeholder="Password"
+    minlength="3"
+    ngModel
+  />
+  <br />
+  <span *ngIf="password.invalid && password.touched">Enter a password</span>
+  <span
+    *ngIf="
+      (password.invalid && password.errors.minlength && password.dirty) ||
+      password.touched
+    "
+    >Enter a password min 3</span
+  >
+  <br />
+  <button type="submit">Submit</button>
+</form> -->
+<form>
+  <input #name ngModel="name" type="text" name="name" />
+  <input #email ngModel="email" type="text" name="email" />
+  <button type="submit"></button>
+</form>
