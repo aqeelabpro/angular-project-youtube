@@ -24,4 +24,8 @@ export class AppComponent {
   saveUserData(userData) {
     console.log(userData);
   }
+
+  saveFormdata(formData) {
+    console.log(formData);
+  }
 }
