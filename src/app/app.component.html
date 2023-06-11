@@ -93,7 +93,7 @@
   <button type="submit">Submit</button>
 </form> -->
 
-<form #form="ngForm" (ngSubmit)="saveFormdata(form.value)">
+<!-- <form #form="ngForm" (ngSubmit)="saveFormdata(form.value)">
   <input
     type="text"
     name="name"
@@ -105,7 +105,7 @@
     maxlength="10"
   />
 
-  <!-- validation for the name input-->
+  validation for the name input
   <div *ngIf="name.touched">
     <span *ngIf="name.invalid && name.errors?.required">name is required</span>
     <span *ngIf="name.invalid && name.errors?.minlength"
@@ -126,7 +126,7 @@
     minlength="2"
     maxlength="11"
   />
-  <!-- validation for the phone input-->
+  validation for the phone input
   <div *ngIf="phone.touched">
     <span *ngIf="phone.invalid && phone.errors?.required"
       >phone is required</span
@@ -142,4 +142,30 @@
   <button [disabled]="name.invalid || phone.invalid" type="submit">
     Submit
   </button>
+</form> -->
+
+<form
+  [formGroup]="formGroup"
+  (ngSubmit)="saveTheReactiveFormData(formGroup.value)"
+>
+  <input
+    formControlName="name"
+    type="text"
+    name="name"
+    placeholder="enter your name"
+  />
+  <input
+    formControlName="email"
+    type="email"
+    name="email"
+    placeholder="enter your email"
+  />
+  <input
+    formControlName="phone"
+    type="tel"
+    name="phone"
+    placeholder="enter your phone"
+  />
+  <br />
+  <button type="submit">Submit</button>
 </form>
